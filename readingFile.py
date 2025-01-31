@@ -20,6 +20,10 @@ f.seek(0)
 #printing single line at a time
 line1 = f.readline()
 print(line1)
+#after first line it will show a empty line. this is because "\n"
+
+line2 = f.readline()
+print(line2)
 
 #closing the file
 f.close()
