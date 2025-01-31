@@ -1,22 +1,25 @@
 #!/bin/python3
 
-# Opening a file in reading mode
+#opening sample.txt file in reading mode
 f = open("sample.txt", "r")
 
-# Reading the full file
+#reading items from the file and saving it to a variable named data
 data = f.read()
 print(data)
 
-# Moving the cursor back to the beginning before reading again
+# Reset file pointer to the beginning
 f.seek(0)
 
-# Reading only 10 characters from the file
+#reading 10 characters from the whole file
 data = f.read(10)
 print(data)
 
-# Reading one line at a time
-data = f.readline()
-print(data)
+# Reset file pointer to the beginning
+f.seek(0)
 
-# Closing the file
+#printing single line at a time
+line1 = f.readline()
+print(line1)
+
+#closing the file
 f.close()
