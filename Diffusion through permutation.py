@@ -1,3 +1,7 @@
+# website: https://cryptohack.org/challenges/aes/
+# problem name: https://cryptohack.org/challenges/aes/
+
+#!/bin/python3
 def shift_rows(s):
     s[0][1], s[1][1], s[2][1], s[3][1] = s[1][1], s[2][1], s[3][1], s[0][1]
     s[0][2], s[1][2], s[2][2], s[3][2] = s[2][2], s[3][2], s[0][2], s[1][2]
