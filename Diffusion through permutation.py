@@ -1,5 +1,5 @@
 # website: https://cryptohack.org/challenges/aes/
-# problem name: https://cryptohack.org/challenges/aes/
+# problem name: Diffusion through Permutation
 
 #!/bin/python3
 def shift_rows(s):
