@@ -1,7 +1,7 @@
 # website: https://cryptohack.org/challenges/general/
 # problem name: SSH Keys
 
-from Crypto.PublicKey import RSA
+from Cryptodome.PublicKey import RSA
 #opening the bruce_rsa.pub file in read mode
 with open("bruce_rsa.pub", "r") as f:
     Key = f.read()
