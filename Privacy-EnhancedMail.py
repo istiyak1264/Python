@@ -1,7 +1,7 @@
 #website: https://cryptohack.org/challenges/general/
 #problem name: Privacy-Enhanced Mail?
 
-from Crypto.PublicKey import RSA
+from Cryptodome.PublicKey import RSA
 
 # Read the PEM file
 f = open("private_key.pem", "r")

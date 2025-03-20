@@ -10,13 +10,13 @@ hex_message = (
 ciphertext = binascii.unhexlify(hex_message)
 
 # Known plaintext at the beginning of the message
-known_plaintext = b"ORDER:"
+key = b"ORDER:"
 
 # Determine the key by XORing the ciphertext with the known plaintext
-key = bytes([ciphertext[i] ^ known_plaintext[i] for i in range(len(known_plaintext))])
+key = bytes([ciphertext[i] ^ key[i] for i in range(len(key))])
 
 # Apply the repeating-key XOR decryption
-decrypted_message = bytes([ciphertext[i] ^ key[i % len(key)] for i in range(len(ciphertext))])
+flag = bytes([ciphertext[i] ^ key[i % len(key)] for i in range(len(ciphertext))])
 
-# Convert decrypted bytes to a string
-decrypted_message.decode(errors="ignore")
+#printing the flag
+print(flag)
