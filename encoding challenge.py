@@ -3,7 +3,7 @@ import codecs
 import json
 import telnetlib
 
-import Crypto.Util.number
+import Cryptodome.Util.number
 
 HOST = "socket.cryptohack.org"
 PORT = 13377
@@ -37,7 +37,7 @@ for i in range(100):
     elif encoding == "rot13":
         decoded = codecs.decode(encoded, "rot13")
     elif encoding == "bigint":
-        decoded = Crypto.Util.number.long_to_bytes(int(encoded, 16)).decode()
+        decoded = Cryptodome.Util.number.long_to_bytes(int(encoded, 16)).decode()
     elif encoding == "utf-8":
         decoded = "".join(chr(o) for o in encoded)
 
